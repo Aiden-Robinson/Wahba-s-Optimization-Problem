@@ -10,7 +10,8 @@ origin = np.array([0, 0, 0])
 
 # Apply ground-truth rotation
 r_gt = R.from_euler('xyz', [30, -20, 45], degrees=True)
-R_gt = r_gt.as_matrix()
+R_gt = r_gt.as_matrix() #the rotation matrix
+print(R_gt)
 
 # Rotate vectors to get body-frame measurements
 u1 = R_gt @ v1
